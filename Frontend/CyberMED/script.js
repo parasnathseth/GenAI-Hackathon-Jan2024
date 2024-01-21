@@ -5,7 +5,28 @@ sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
 });
 
-document.getElementById('form').onkeydown 
-    if(e.keyCode == 13){
 
-    };
+const input = document.getElementById('chatInput')
+function SubmitForm() {
+
+
+
+    const chat = document.getElementById('form'); //input
+    var display = document.getElementById('tokenStream'); //output box
+
+    display.innerHTMl = chat.value;
+
+
+
+ 
+
+}
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode == 13){
+        //Post
+        SubmitForm();
+
+    }
+});
+
