@@ -168,3 +168,7 @@ table { width: 100%; border-collapse: collapse; }
     visibility: hidden;
 }
 
+.cybermed-header {
+    color: white;
+    text-decoration: none;
+}
