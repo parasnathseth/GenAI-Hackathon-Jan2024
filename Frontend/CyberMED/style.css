@@ -17,7 +17,8 @@ body {
     transition: width 0.3s;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Set the sidebar height to 100% of the viewport height */
+    height: 100hz; /* Set the sidebar height to 100% of the viewport height */
+    overflow-y: auto;
 }
 .sidebar.collapsed .sidebar-text {
     visibility: hidden;
