@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberMED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content" id="sidebar-Chat">
+            <h2 class="sidebar-text">CyberMED</h2>
+            <div><textarea>Work</textarea></div>
+        </div>
+        <div class="sidebar-functions">
+            <button type="button">Summarize Symptoms</button>
+        </div>
+        <div class="sidebar-functions">
+            <button type="button">Summarize Medical Records</button>
+        </div>
+        <div class="chat-area collapsed">
+            <div class="chat-box">
+                <input type="text" id="chatInput" placeholder="Type your message">
+            </div>
+        </div>
+    </div>
+    <div class="toggle-btn" id="sidebar-toggle">
+        <div class="toggle-icon"></div>
+    </div>
+    <div class="main-content">
+        <div class="box">
+        <h1>Medical Examination</h1>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td>Kristen</td>
+                <th>Last Name</th>
+                <td>Chu</td>
+                <th>Date of Birth</th>
+                <td>18.05.2000</td>
+                <th>Examination Date</th>
+                <td>11.23.2022</td>
+            </tr>
+        </table>
+        </div>
+        <div class="box">
+            <h2>Current Symptoms</h2>
+            <textarea id="patientInfo">Information from patients provides pre session appears here</textarea>
+        </div>
+        <div class="box">
+            <h2>Medical History</h2>
+            <textarea id="medHistory">Information from patients previous medical treatment</textarea>
+        </div>
+        <div class="box">
+            <h2>Current Medications</h2>
+            <textarea id="currentMedications">List of current medications
+                1. Medication one
+                2. medication two
+                3. medication three
+                4. medication four
+                5. medication five
+            </textarea>
+        </div>
+        <div class="box">
+            <h2>Radiology and Lab testing</h2>
+                <textarea id="Radiology">Previous radiology tests
+                    1. Radology test preformed xxx 
+                    Results: 
+                    why: 
+                </textarea>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
