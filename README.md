@@ -7,3 +7,11 @@
 
   Link to the template: <https://html5up.net/hyperspace>.  
   Link to the CCA 3.0 License: [Creative Commons License 3.0](https://creativecommons.org/licenses/by/3.0/).   
+
+## The Team
+
+* Aniq Elahi ([@Aniq-byte](https://github.com/Aniq-byte))
+* Cole Halfyard [@MagicDK](https://github.com/MagicDK)
+* Omar Shakil Ali [@omarshak](https://github.com/omarshak)
+* Julian McCarty [@CourtKingJuJu](https://github.com/CourtKingJuJu)
+* Paras Nath Seth ([@parass05](https://github.com/parass05))
