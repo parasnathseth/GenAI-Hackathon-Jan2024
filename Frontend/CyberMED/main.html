@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="sidebar">
-        <div class="sidebar-content" id="sidebar-Chat">
+        <div class="sidebar-content">
             <h2 class="sidebar-text">CyberMED</h2>
-            <div><textarea>Work</textarea></div>
+            <div id="tokenStream"><textarea>Work</textarea></div>
         </div>
         <div class="sidebar-functions">
             <button type="button">Summarize Symptoms</button>
@@ -20,7 +20,9 @@
         </div>
         <div class="chat-area collapsed">
             <div class="chat-box">
-                <input type="text" id="chatInput" placeholder="Type your message">
+                <form action="=/" method="post">
+                    <input type="text" id="chatInput" placeholder="Type your message">
+                </form> 
             </div>
         </div>
     </div>
