@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userTypeSwitch = document.getElementById('userTypeSwitch');
+            const PromptForDoctor = "You are helping a doctor, feel free to use technical terms.";
+            const PromptForPatient = "You are helping a patient, use simple terms to make it understandable for the patient.";
+    
+            userTypeSwitch.addEventListener('change', function() {
+                if (this.checked) {
+                    console.log(PromptForDoctor); // Or use it to prefix the user input
+                } else {
+                    console.log(PromptForPatient); // Or use it to prefix the user input
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+});
+
+
+const input = document.getElementById('chatInput')
+function SubmitForm() {
+
+
+
+    const chat = document.getElementById('form'); //input
+    var display = document.getElementById('tokenStream'); //output box
+
+    display.innerHTMl = chat.value;
+
+
+
+ 
+
+}
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode == 13){
+        //Post
+        SubmitForm();
+
+    }
+});
+
+
+    </script>
+    
+    <style>
+        .response-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        .response-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+
+
+        /* Switch Button Styling */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        body {
+  box-sizing: border-box;
+  position: relative;
+  line-height: 1.5;
+  font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+  
+ }
+ body {
+    box-sizing: border-box;
+  position: relative;
+  line-height: 1.5;
+  font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.sidebar {
+    width: 45%;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100hz; /* Set the sidebar height to 100% of the viewport height */
+}
+h1 {
+    justify-content: center;
+}
+.sidebar.collapsed .sidebar-text {
+    visibility: hidden;
+}
+/* Styles for the buttons when sidebar is collapsed */
+.sidebar.collapsed button {
+    visibility: hidden;
+}
+
+.sidebar.collapsed {
+    width: 0px;
+}
+.sidebar.collapsed textarea{
+    visibility: hidden;
+}
+
+.toggle-btn {
+    width: 60px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s;
+}
+
+.toggle-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed .toggle-icon {
+    width: 20px;
+}
+.sidebar.collapsed input {
+    visibility: hidden;
+}
+.sidebar-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+#header{
+    text-align: center;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content in the main content area */
+}
+
+.box {
+    flex-basis: calc(33.3333% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.fillForms {
+    width: 100%;
+}
+
+
+.chat-box input[type="text"],
+.chat-box button {
+    padding: 10px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    width: 80%;
+}
+
+
+.chat-box input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-left: 20px;
+}
+
+.chat-box button {
+    background-color: #0084ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-box button:hover {
+    background-color: #0060d0;
+}
+.sidebar-functions button {
+    padding: 10px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    width: 84.5%;
+}
+
+table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f2f2f2; }
+
+
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.sidebar textarea{
+    height: 550px;
+    background-color: #333;
+    color: white;
+    border:  #333;  
+    margin-left: 22px;
+    width: 530px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.siderbar #ghost{
+    visibility: hidden;
+}
+.sidebar.collapsed #ghost{
+    visibility: hidden;
+}
+
+.cybermed-header {
+    color: white;
+    text-decoration: none;
+
+
+}
+.response-container {
+    color: #333; /* This will color all text within .response-container */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h2 class="sidebar-text"><a class="cybermed-header" href="../html5up-hyperspace/index.html">CyberMed</a></h2>
+            <div><input type="text" placeholder="Patient ID"></div>
+            <div class="response-container">
+                <h3>AI Response:</h3>
+                <div>{{ response|safe }}</div>
+            </div>
+        </div>
+       
+        <div class="chat-area collapsed">
+            <div class="chat-box">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="user_input" placeholder="Type your message...">
+                    <button type="submit">Send</button>
+                    <input type="radio" id="patient" name="user_type" value="patient" checked>
+                    <label for="patient">Patient</label>
+                    <input type="radio" id="doctor" name="user_type" value="doctor">
+                    <label for="doctor">Doctor</label>
+                </form>
+                
+            
+                
+            </div>
+        </div>
+    </div>
+    <div class="toggle-btn" id="sidebar-toggle">
+        <div class="toggle-icon"></div>
+    </div>
+    <div class="main-content">
+        <h1 id="header">Clinical Note</h1>
+        <div class="box">
+        <h2>Patient Information</h2>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td>Kristen</td>
+                <th>Last Name</th>
+                <td>Chu</td>
+                <th>Date of Birth</th>
+                <td>18/05/2000</td>
+                <th>Examination Date</th>
+                <td>11/23/2022</td>
+            </tr>
+        </table>
+        </div>
+        <div class="box">
+            <h2>Current Symptoms</h2>
+            <textarea id="patientInfo" class="fillForms">Information from patients provides pre session appears here</textarea>
+        </div>
+        <div class="box">
+            <h2>Treatment Plan</h2>
+                <textarea id="Radiology" class="fillForms">How to proceed
+                    what:
+                    when:
+                    why: 
+                </textarea>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
