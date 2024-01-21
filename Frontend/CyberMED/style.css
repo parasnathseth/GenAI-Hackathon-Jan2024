@@ -18,7 +18,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100hz; /* Set the sidebar height to 100% of the viewport height */
-    overflow-y: auto;
+}
+h1 {
+    justify-content: center;
 }
 .sidebar.collapsed .sidebar-text {
     visibility: hidden;
@@ -56,10 +58,15 @@ body {
 .sidebar.collapsed .toggle-icon {
     width: 20px;
 }
-
+.sidebar.collapsed input {
+    visibility: hidden;
+}
 .sidebar-content {
     padding: 20px;
     flex-grow: 1;
+}
+#header{
+    text-align: center;
 }
 
 .main-content {
@@ -83,6 +90,9 @@ body {
     margin-top: 0;
 }
 
+.fillForms {
+    width: 100%;
+}
 
 
 .chat-box input[type="text"],
